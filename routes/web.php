@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/create-post', function() {
+Route::get('/admin/create-post', function() {
     return view('admin/create-post');
 });
 
