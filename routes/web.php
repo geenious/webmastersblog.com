@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinksController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/admin/create-post', function() {
 Route::post('/post/create', [CreatePost::class]);
 
 Route::get('links', [LinksController::class, 'show']);
+
+Route::resource('posts', PostController::class);
