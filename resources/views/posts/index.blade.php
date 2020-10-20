@@ -6,6 +6,11 @@
   <h1 class="font-serif text-3xl mb-6">Welcome back User</h1>
   <div class="p-8 bg-teal-200 rounded shadow-lg">
     {{-- List User's Post Entries --}}
+    <ul>
+      @foreach ($posts as $post)
+        <li>{{ $post->title }}</li>
+      @endforeach
+    </ul>
   </div>
 </section>
 

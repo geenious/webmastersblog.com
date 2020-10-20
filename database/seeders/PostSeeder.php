@@ -1,8 +1,6 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
 use Illuminate\Database\Seeder;
 
@@ -15,9 +13,16 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('posts')->insert([
-            'title' => Str::random(10),
-            'body' => 'Oh, Hello There'
+        \DB::table('posts')->truncate();
+        \DB::table('posts')->insert([
+            'slug' => 'my-first-post',
+            'title' => 'Joe',
+            'body' => 'Oh, hello there.'
+        ]);
+        \DB::table('posts')->insert([
+            'slug' => 'my-second-post',
+            'title' => 'Jane',
+            'body' => 'Oh, hello there.'
         ]);
     }
 }
