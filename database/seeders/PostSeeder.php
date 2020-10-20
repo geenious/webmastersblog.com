@@ -22,7 +22,7 @@ class PostSeeder extends Seeder
         \DB::table('posts')->insert([
             'slug' => 'my-second-post',
             'title' => 'Jane',
-            'body' => 'Oh, hello there.'
+            'body' => 'Oh, hello there...again.'
         ]);
     }
 }

@@ -19,12 +19,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/admin/create-post', function() {
-    return view('admin/create-post');
-});
-
-Route::post('/post/create', [CreatePost::class]);
-
 Route::get('links', [LinksController::class, 'show']);
 
 Route::resource('posts', PostController::class);

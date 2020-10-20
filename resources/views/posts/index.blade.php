@@ -8,7 +8,7 @@
     {{-- List User's Post Entries --}}
     <ul>
       @foreach ($posts as $post)
-        <li>{{ $post->title }}</li>
+        <li><a class="hover:underline" href="/posts/{{ $post->id }}">{{ $post->title }}</a></li>
       @endforeach
     </ul>
   </div>

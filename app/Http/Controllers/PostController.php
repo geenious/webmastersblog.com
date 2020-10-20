@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = DB::select('select * from posts');
+        $posts = DB::table('posts')->get();
 
         return view('posts.index', [
             'posts' => $posts
@@ -51,7 +51,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('posts.show', ['post' => $post]);
     }
 
     /**
