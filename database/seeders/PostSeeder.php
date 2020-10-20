@@ -16,12 +16,12 @@ class PostSeeder extends Seeder
         \DB::table('posts')->truncate();
         \DB::table('posts')->insert([
             'slug' => 'my-first-post',
-            'title' => 'Joe',
+            'title' => 'OMG IT\'S WORKING',
             'body' => 'Oh, hello there.'
         ]);
         \DB::table('posts')->insert([
             'slug' => 'my-second-post',
-            'title' => 'Jane',
+            'title' => 'Controllers, Models, Migrations, Oh My.',
             'body' => 'Oh, hello there...again.'
         ]);
     }
