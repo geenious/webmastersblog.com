@@ -40,7 +40,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, array(
+            'title' => 'required',
+            'body' => 'required',
+        ));
+
+        $slug = str_replace(' ', '-', $request->title);
+
+        $post = new Post;
+        $post->slug = $slug;
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+
+        return redirect()->route('posts.index');
     }
 
     /**
